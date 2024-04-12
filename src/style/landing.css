@@ -1,0 +1,54 @@
+#langing_page{
+    /* width: 65%; */
+    clip-path: inset(10px 10px 2px 1px);
+  
+  }
+  .intro{
+    display: flex;
+  }
+  .intro_text{
+    color:black;
+    font-family: Inter;
+    font-size: 10vh;
+    text-align: center;
+    align-self: center;
+    width: 50%;
+  }
+  .buttons_r{
+    display: grid;
+    margin-top: 3vh;
+    justify-content: center;
+  
+  }
+  .auto{
+    background-color: black;
+    color: #FF781F;
+    height: 5vh;
+    width: 20vh;
+    font-size: 25px;
+    margin:1vh;
+    border: none;
+  }
+
+  .form{
+    display: grid;
+    justify-content: center;
+  }
+
+
+  @media screen and (max-width: 600px) {
+    #langing_page{
+        width: 100%;
+    }
+  
+  }
+  @media screen and (min-width: 600px) {
+    .main{
+        align-items: center;
+    }
+    .buttons_r{
+        display: none;
+    }
+  
+  }
+

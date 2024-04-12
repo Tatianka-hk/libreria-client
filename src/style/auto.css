@@ -1,0 +1,45 @@
+.auto_input{
+    background-color: black;
+    color: #FF781F;
+    width: 50vh;
+    height: 7vh;
+    border: none;
+    margin: 3vh;
+    border-radius: 10px;
+}
+.frst{
+    margin-top: 10vh;
+}
+.enter{
+    background-color: black;
+    color: #FF781F;
+    height: 5vh;
+    border: none;
+    border-radius: 10px;
+    width: 20vh;
+
+}
+.enter_but{
+    justify-content:center ;
+    width: 100%;
+    display: flex;
+}
+.auto_error{
+    display: flex;
+    width: 100%;
+    color: red;
+    font-size: 5vh;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+
+::placeholder {
+    color: #FF781F;
+    opacity: 1; 
+  }
+.auto_block{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+

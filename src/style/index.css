@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.footer{
+  background-color: black;
+  color:#FF781F;
+  font-family: Inter;
+  font-size: 40px;
+  height: 104px;
+  height: 10vh;
+  align-items: center;
+  display: flex;
+  padding-left: 5vh;
+
+}
+.header{
+  background-color: black;
+  color:#FF781F; 
+  font-family: Inter;
+  font-size: 10vh;
+  height: 15vh;
+  align-items: center;
+  display: flex;
+  padding-left: 5vh;
+  justify-content: space-between;
+}
+.reg_buttons{
+  display: flex;
+  float: inline-end;
+}
+.reg_button{
+  font-size: 5vh;
+  margin: 2vh;
+}
+ 
+.main{
+  background-color: #FF781F;
+  height: 75vh;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  margin: 2vh;
+}
+
+.left-section {
+  flex: 1; 
+}
+.link_auto{
+  text-decoration: none;
+  color: inherit;
+}
+.lang_select{
+  background-color: black;
+  color: #FF781F;
+  border:none;
+  font-size: 3vh;
+}
+@media screen and (max-width: 600px) {
+  .mb{
+    display: none;
+  }
+
+}
+
+.user_main{
+  background-color: #FF781F;
+  min-height: 75vh;
+  padding: 1vh;
+}
+.book_title{
+  font-size: 2.5vh;
+}
+
+.book_info{
+  margin: 2vh;
+  display: flex;
+}
+
+.book_separator{
+  background-color:black;
+  height: 2px;
+  border: none;
+}
+
+.book_optional{
+  display: grid;
+  align-items: center;
+}
+
+.want_to_read{
+  border: none;
+  background-color: #FF781F;
+  font-family: sans-serif
+}
+
+.input_container{
+  display: flex;
+  justify-content: flex-end;
+}
+.input_for_search{
+  background-color: black;
+  color:#FF781F ;
+  border: none;
+  width: 35vh;
+}
+
+.book_link{
+  text-decoration: none;
+  color: inherit;
+}
+.admin_buttons{
+  display: flex;
+  justify-content: center;
+}
+.admin_button{
+  margin: 2vh;
+  background-color: black;
+  color:#FF781F ;
+  border: none;
+  margin: 2vh;
+  padding: 2vh;
+  width: 35vh;
+}
+
+.edit_image{
+  width: 5vh;
+}

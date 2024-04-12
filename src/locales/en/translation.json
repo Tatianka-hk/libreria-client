@@ -1,0 +1,22 @@
+{
+    "greeting": "Hello, world!",
+    "sign_up": "sign up!",
+    "login": "login!",
+    "inputLoging":"Input your login",
+    "inputPassword":"Input your password",
+    "inputEmail":"Input your email",
+    "login_ent":"Login",
+    "reg_ent":"Sign up",
+    "errorNoLogin":"Login is required",
+    "errorNoEmail":"Email is required",
+    "errorNoPassword":"Password is required",
+    "loginIsInvalid":"min length of login is 5",
+    "emailIsInvalid":"email is invalid",
+    "passwordloginIsInvalid":"min length of password is 8",
+    "genre":"Genre",
+    "description":"Descritpion",
+    "home":"Home",
+    "input_search": "Search by name or author",
+    "want_to_read":"I want to read",
+    "add_admin":"Add admin"
+  }
