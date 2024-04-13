@@ -1,45 +1,65 @@
-.auto_input{
-    background-color: black;
-    color: #FF781F;
-    width: 50vh;
-    height: 7vh;
-    border: none;
-    margin: 3vh;
-    border-radius: 10px;
+.auto_input {
+  background-color: black;
+  color: #ff781f;
+  width: 50vh;
+  height: 7vh;
+  border: none;
+  margin: 3vh;
+  border-radius: 10px;
 }
-.frst{
-    margin-top: 10vh;
+.frst {
+  margin-top: 10vh;
 }
-.enter{
-    background-color: black;
-    color: #FF781F;
-    height: 5vh;
-    border: none;
-    border-radius: 10px;
-    width: 20vh;
-
+.enter {
+  background-color: black;
+  color: #ff781f;
+  height: 5vh;
+  border: none;
+  border-radius: 10px;
+  width: 20vh;
+  margin-bottom: 3vh;
 }
-.enter_but{
-    justify-content:center ;
-    width: 100%;
-    display: flex;
+.enter_but {
+  justify-content: center;
+  width: 100%;
+  display: flex;
 }
-.auto_error{
-    display: flex;
-    width: 100%;
-    color: red;
-    font-size: 5vh;
-    justify-content: center;
-    margin-bottom: 3vh;
+.auto_error {
+  display: flex;
+  width: 100%;
+  color: red;
+  font-size: 5vh;
+  justify-content: center;
+  margin-bottom: 3vh;
 }
 
 ::placeholder {
-    color: #FF781F;
-    opacity: 1; 
-  }
-.auto_block{
-    display: grid;
-    justify-content: center;
-    align-items: center;
+  color: #ff781f;
+  opacity: 1;
+}
+.auto_block {
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
+.sd_textarea {
+  height: 15vh;
+  width: 100vh;
+}
+
+.ld_textarea {
+  height: 25vh;
+  width: 100vh;
+}
+
+.inputs {
+  display: grid;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .textarea_mb {
+    width: 50vh;
+  }
+}

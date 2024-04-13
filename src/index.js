@@ -4,12 +4,12 @@ import './style/index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-import Footer from './components/Footer'
-import Header from './components/Header'
+import Footer from './components/Footer';
+import Header from './components/Header';
 
-import Landing from './pages/Landing'
-import Registration from './pages/Registration'; 
-import Login from './pages/Login'
+import Landing from './pages/Landing';
+import Registration from './pages/Registration';
+import Login from './pages/Login';
 import Home from './pages/Home';
 import Favs from './pages/Fav';
 import WantToRead from './pages/WantToRead';
@@ -17,6 +17,12 @@ import Book from './pages/Book';
 import AddAdminPage from './pages/AddAdminPage';
 import Admin from './pages/Admin';
 import Books from './pages/Books';
+import EditBooks from './pages/EditBook';
+import Users from './pages/Users';
+import EditUser from './pages/EditUser';
+import AddBook from './pages/AddBook';
+import EditData from './pages/EditData';
+import EditDataUser from './pages/EditDataUser';
 
 import reportWebVitals from './reportWebVitals';
 import i18n from './i18n';
@@ -26,23 +32,29 @@ ReactDOM.render(
     <GoogleOAuthProvider clientId="1204869052-rcu5t3uf3bhv263j0s6urdhngo8mtnav.apps.googleusercontent.com">
       <I18nextProvider i18n={i18n}>
         <Router>
-    <Header/>
-    <Routes>
-        <Route exact path="/" element={<Landing />}/>
-        <Route path="/registration" element={<Registration />}/>
-        <Route path="/login" element={<Login />} />
-        <Route path= "/home" element={<Home/>}/>
-        <Route path= "/favs" element={<Favs/>}/>
-        <Route path= "/want_to_read" element={<WantToRead/>}/>
-        <Route path= "/book/:id" element={<Book/>}/>
-        <Route path= "/add/admin" element={<AddAdminPage/>}/>
-        <Route path= "/admin" element={<Admin/>}/>
-        <Route path= "/books" element={<Books/>}/>
-      </Routes>
+          <Header />
+          <Routes>
+            <Route exact path="/" element={<Landing />} />
+            <Route path="/registration" element={<Registration />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/favs" element={<Favs />} />
+            <Route path="/want_to_read" element={<WantToRead />} />
+            <Route path="/book/:id" element={<Book />} />
+            <Route path="/add/admin" element={<AddAdminPage />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/books" element={<Books />} />
+            <Route path="/edit/book/:id" element={<EditBooks />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/edit/user/:id" element={<EditUser />} />
+            <Route path="/add/book" element={<AddBook />} />
+            <Route path="/edit/data" element={<EditData />} />
+            <Route path="/setting" element={<EditDataUser />} />
+          </Routes>
 
-    <Footer/>
-    </Router>
-    </I18nextProvider>
+          <Footer />
+        </Router>
+      </I18nextProvider>
     </GoogleOAuthProvider>
   </React.StrictMode>,
   document.getElementById('root')

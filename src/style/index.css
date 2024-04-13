@@ -1,33 +1,28 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-
-.footer{
+.footer {
   background-color: black;
-  color:#FF781F;
+  color: #ff781f;
   font-family: Inter;
   font-size: 40px;
-  height: 104px;
   height: 10vh;
   align-items: center;
   display: flex;
   padding-left: 5vh;
-
 }
-.header{
+.header {
   background-color: black;
-  color:#FF781F; 
+  color: #ff781f;
   font-family: Inter;
   font-size: 10vh;
   height: 15vh;
@@ -36,17 +31,17 @@ code {
   padding-left: 5vh;
   justify-content: space-between;
 }
-.reg_buttons{
+.reg_buttons {
   display: flex;
   float: inline-end;
 }
-.reg_button{
-  font-size: 5vh;
+.reg_button {
+  font-size: 4vh;
   margin: 2vh;
 }
- 
-.main{
-  background-color: #FF781F;
+
+.main {
+  background-color: #ff781f;
   height: 75vh;
 }
 
@@ -57,85 +52,123 @@ code {
 }
 
 .left-section {
-  flex: 1; 
+  flex: 1;
 }
-.link_auto{
+.link_auto {
   text-decoration: none;
   color: inherit;
 }
-.lang_select{
+.lang_select {
   background-color: black;
-  color: #FF781F;
-  border:none;
+  color: #ff781f;
+  border: none;
   font-size: 3vh;
 }
-@media screen and (max-width: 600px) {
-  .mb{
-    display: none;
-  }
-
-}
-
-.user_main{
-  background-color: #FF781F;
+.admin_main {
+  background-color: #ff781f;
   min-height: 75vh;
   padding: 1vh;
 }
-.book_title{
+
+.admin_main1 {
+  background-color: #ff781f;
+  min-height: 75vh;
+}
+
+.user_main {
+  background-color: #ff781f;
+  min-height: 75vh;
+  padding: 1vh;
+}
+.book_title {
   font-size: 2.5vh;
 }
 
-.book_info{
+.book_info {
   margin: 2vh;
   display: flex;
 }
 
-.book_separator{
-  background-color:black;
+.book_separator {
+  background-color: black;
   height: 2px;
   border: none;
 }
 
-.book_optional{
+.book_optional {
   display: grid;
   align-items: center;
 }
 
-.want_to_read{
+.want_to_read {
   border: none;
-  background-color: #FF781F;
-  font-family: sans-serif
+  background-color: #ff781f;
+  font-family: sans-serif;
 }
 
-.input_container{
+.input_container {
   display: flex;
   justify-content: flex-end;
 }
-.input_for_search{
+.input_for_search {
   background-color: black;
-  color:#FF781F ;
+  color: #ff781f;
   border: none;
   width: 35vh;
 }
 
-.book_link{
+.book_link {
   text-decoration: none;
   color: inherit;
 }
-.admin_buttons{
+.admin_buttons {
   display: flex;
   justify-content: center;
+  flex-flow: wrap;
 }
-.admin_button{
+.admin_button {
   margin: 2vh;
   background-color: black;
-  color:#FF781F ;
+  color: #ff781f;
   border: none;
   margin: 2vh;
   padding: 2vh;
-  width: 35vh;
+  width: 55vh;
 }
 
-.edit_image{
+.edit_image {
   width: 5vh;
+}
+
+.b_o_a {
+  margin-top: 4vh;
+}
+.marg {
+  margin-bottom: 3vh;
+}
+.filters {
+  display: flex;
+  justify-content: space-between;
+}
+.genre_filter {
+  background-color: black;
+  color: #ff781f;
+  width: 20vh;
+}
+@media screen and (max-width: 600px) {
+  .mb {
+    display: none;
+  }
+  .admin_main {
+    padding: inherit;
+  }
+  .mb_margin {
+    margin: 1vh;
+  }
+  .textarea_mb {
+    width: 50vh;
+  }
+  .enter_mb {
+    margin-bottom: 3vh;
+  }
 }
