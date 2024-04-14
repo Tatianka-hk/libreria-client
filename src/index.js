@@ -23,6 +23,7 @@ import EditUser from './pages/EditUser';
 import AddBook from './pages/AddBook';
 import EditData from './pages/EditData';
 import EditDataUser from './pages/EditDataUser';
+import SendEmail from './pages/SendEmail';
 
 import reportWebVitals from './reportWebVitals';
 import i18n from './i18n';
@@ -50,7 +51,7 @@ ReactDOM.render(
             <Route path="/add/book" element={<AddBook />} />
             <Route path="/edit/data" element={<EditData />} />
             <Route path="/setting" element={<EditDataUser />} />
-
+            <Route path="/send_email" element={<SendEmail/>} />
           </Routes>
 
           <Footer />

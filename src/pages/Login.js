@@ -90,6 +90,9 @@ function Login() {
           placeholder={t('inputPassword')}
         ></input>
         <div className="auto_error">{errorA}</div>
+        <div class="auth_app">
+        <Link className='email_a' to="/send_email" >forget your password?</Link>
+        </div>
         <div className="enter_but">
           {' '}
           <button onClick={send} className="enter">
