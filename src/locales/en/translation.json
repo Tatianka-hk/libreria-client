@@ -38,5 +38,10 @@
   "edit_data": "Edit my data",
   "delete_data": "Delete my account",
   "edit_password": "Change password",
-  "want_to_delete_account_admin": "Delete account"
+  "want_to_delete_account_admin": "Delete account",
+  "errorUniqueEmail":"Email ya is in system ",
+  "errorUniqueLogin":"Login ya is in system ",
+  "send_email":"Send email",
+  "send_email_part1":"For reset password send email",
+  "send_email_part2":"Check your email"
 }

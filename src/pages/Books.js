@@ -13,7 +13,7 @@ function Books() {
 
   useEffect(async () => {
     await axios
-      .get('http://localhost:4000/books/get', {
+      .get(`${process.env.REACT_APP_URL}/books/get`, {
         headers: { accessToken: localStorage.getItem('token') }
       })
       .then((res) => {

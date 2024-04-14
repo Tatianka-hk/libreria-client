@@ -38,5 +38,10 @@
   "edit_data": "Редагувати мої дані",
   "delete_data": "Видалити аккаунт",
   "edit_password": "Змінити пароль",
-  "want_to_delete_account_admin": "Видалити аккаунт"
+  "want_to_delete_account_admin": "Видалити аккаунт",
+  "errorUniqueEmail":"Пошта вже використана для цієї системи",
+  "errorUniqueLogin":"Логін вже є в цій системі ",
+  "send_email":"Надіслати повідомлення",
+  "send_email_part1":"Щоб скинути пароль треба надіслати пошту",
+  "send_email_part2":"Перевірте будь ласка пошту"
 }

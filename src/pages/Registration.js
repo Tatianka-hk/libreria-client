@@ -34,7 +34,7 @@ function Registration() {
           headers: { Authorization: `Bearer ${response.access_token}` }
         })
         .then(async (response) => {
-          const res = await axios.post('http://localhost:4000/auth/register_with_login', {
+          const res = await axios.post(`${process.env.REACT_APP_URL}/auth/register_with_login`, {
             email: response.data.email,
             login: response.data.name
           });
@@ -42,6 +42,8 @@ function Registration() {
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('role', res.data.role);
             window.location.href = '/home';
+          }else if(res.data.errorUniqueEmail){
+            setError(t('errorUniqueEmail'))
           } else {
             setError('Error');
           }
@@ -84,7 +86,7 @@ function Registration() {
   const send = async () => {
     try {
       if (!validate()) return false;
-      const res = await axios.post('http://localhost:4000/auth/register', {
+      const res = await axios.post(`${process.env.REACT_APP_URL}/auth/register`, {
         login: inputLog,
         email: inputEmail,
         password: inputPas
@@ -93,7 +95,12 @@ function Registration() {
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('role', res.data.role);
         window.location.href = '/home';
-      } else {
+      } else if(res.data.errorUniqueEmail){
+        setError(t('errorUniqueEmail'))
+      } else if(res.data.errorUniqueLogin){
+      setError(t('errorUniqueLogin'))
+    }
+      else {
         setError('Error');
       }
     } catch (error) {
@@ -132,6 +139,7 @@ function Registration() {
             {t('reg_ent')}
           </button>
         </div>
+        <div class="auth_app">
         <GoogleLogin
           buttonText="Signup with Google"
           onSuccess={login}
@@ -139,6 +147,7 @@ function Registration() {
           // cookiePolicy={'single_host_origin'}
           // isSignedIn={true}
         />
+        </div>
       </div>
     </div>
   );

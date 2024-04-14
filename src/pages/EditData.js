@@ -13,7 +13,7 @@ function EditData() {
 
   useEffect(async () => {
     await axios
-      .get('http://localhost:4000/auth/get_admin', {
+      .get(`${process.env.REACT_APP_URL}/auth/get_admin`, {
         headers: { accessToken: localStorage.getItem('token') }
       })
       .then((res) => {
@@ -70,7 +70,7 @@ function EditData() {
     }
     await axios
       .put(
-        'http://localhost:4000/auth/edit_admin',
+        `${process.env.REACT_APP_URL}/auth/edit_admin`,
         {
           login,
           email
@@ -91,7 +91,7 @@ function EditData() {
     }
     await axios
       .put(
-        'http://localhost:4000/auth/admin/edit_pass',
+        `${process.env.REACT_APP_URL}/auth/admin/edit_pass`,
         { password },
         { headers: { accessToken: localStorage.getItem('token') } }
       )
@@ -105,7 +105,7 @@ function EditData() {
 
   const deleteAdmin = async () => {
     await axios
-      .delete('http://localhost:4000/auth/delete_admin', {
+      .delete(`${process.env.REACT_APP_URL}/auth/delete_admin`, {
         headers: { accessToken: localStorage.getItem('token') }
       })
       .then((res) => {

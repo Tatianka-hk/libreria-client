@@ -12,7 +12,7 @@ function Favs() {
 
   useEffect(async () => {
     await axios
-      .get('http://localhost:4000/user/see_fav', {
+      .get(`${process.env.REACT_APP_URL}/user/see_fav`, {
         headers: { accessToken: localStorage.getItem('token') }
       })
       .then((res) => {
@@ -29,7 +29,7 @@ function Favs() {
   const delFav = async (bid) => {
     await axios
       .post(
-        'http://localhost:4000/user/delete_from_favorite',
+        `${process.env.REACT_APP_URL}/user/delete_from_favorite`,
         { id: bid },
         {
           headers: { accessToken: localStorage.getItem('token') }

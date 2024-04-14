@@ -52,12 +52,32 @@
   height: 25vh;
   width: 100vh;
 }
+.send_email_m1{
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+}
+
+.send_email_m2{
+  display: flex;
+  justify-content: center;
+  color: darkgreen;
+}
 
 .inputs {
   display: grid;
   justify-content: center;
 }
-
+.auth_app{
+  display: grid;
+  justify-content: center;
+}
+.email_a{
+  text-decoration: none;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 2vh;
+}
 @media screen and (max-width: 600px) {
   .textarea_mb {
     width: 50vh;

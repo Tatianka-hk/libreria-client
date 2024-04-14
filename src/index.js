@@ -29,7 +29,7 @@ import i18n from './i18n';
 import { I18nextProvider } from 'react-i18next';
 ReactDOM.render(
   <React.StrictMode>
-    <GoogleOAuthProvider clientId="1204869052-rcu5t3uf3bhv263j0s6urdhngo8mtnav.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId={`${process.env.REACT_APP_GOOGLE_CLIENT_ID}`}>
       <I18nextProvider i18n={i18n}>
         <Router>
           <Header />
@@ -50,6 +50,7 @@ ReactDOM.render(
             <Route path="/add/book" element={<AddBook />} />
             <Route path="/edit/data" element={<EditData />} />
             <Route path="/setting" element={<EditDataUser />} />
+
           </Routes>
 
           <Footer />

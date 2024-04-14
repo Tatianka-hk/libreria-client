@@ -11,7 +11,7 @@ function AddAdminPage() {
 
   useEffect(async () => {
     await axios
-      .get('http://localhost:4000/auth/admin_check', {
+      .get(`${process.env.REACT_APP_URL}/auth/admin_check`, {
         headers: { accessToken: localStorage.getItem('token') }
       })
       .then((res) => {
@@ -66,7 +66,7 @@ function AddAdminPage() {
     try {
       if (!validate()) return false;
       const res = await axios.post(
-        'http://localhost:4000/auth/add_admin',
+        `${process.env.REACT_APP_URL}/auth/add_admin`,
         {
           login: inputLog,
           email: inputEmail,

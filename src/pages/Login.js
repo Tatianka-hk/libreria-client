@@ -3,6 +3,7 @@ import '../style/auto.css';
 import axios from 'axios';
 import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 function Login() {
   const { t } = useTranslation();
 
@@ -31,7 +32,7 @@ function Login() {
           headers: { Authorization: `Bearer ${response.access_token}` }
         })
         .then(async (response) => {
-          const res = await axios.post('http://localhost:4000/auth/login_with_login', {
+          const res = await axios.post(`${process.env.REACT_APP_URL}/auth/login_with_login`, {
             email: response.data.email,
             login: response.data.name
           });
@@ -50,7 +51,7 @@ function Login() {
 
   const send = async () => {
     try {
-      const res = await axios.post('http://localhost:4000/auth/login', {
+      const res = await axios.post(`${process.env.REACT_APP_URL}/auth/login`, {
         login: inputLog,
         password: inputPas
       });
@@ -95,6 +96,7 @@ function Login() {
             {t('login_ent')}
           </button>
         </div>
+        <div class="auth_app">
         <GoogleLogin
           buttonText="Login with Google"
           onSuccess={login}
@@ -102,6 +104,7 @@ function Login() {
           // cookiePolicy={'single_host_origin'}
           // isSignedIn={true}
         />
+        </div>
       </div>
     </div>
   );

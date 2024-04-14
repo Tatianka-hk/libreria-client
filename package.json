@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
     "husky": "^9.0.11",
     "i18next": "^23.11.0",
     "lint-staged": "^15.2.2",
@@ -30,7 +31,10 @@
     "eject": "react-scripts eject"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["npm run lint:fix", "npm run format"]
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint:fix",
+      "npm run format"
+    ]
   },
   "husky": {
     "hooks": {

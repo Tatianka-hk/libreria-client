@@ -6,7 +6,7 @@ function Admin() {
   const { t } = useTranslation();
   useEffect(async () => {
     await axios
-      .get('http://localhost:4000/auth/admin_check', {
+      .get(`${process.env.REACT_APP_URL}/auth/admin_check`, {
         headers: { accessToken: localStorage.getItem('token') }
       })
       .then((res) => {

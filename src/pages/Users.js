@@ -13,7 +13,7 @@ function Users() {
 
   useEffect(async () => {
     await axios
-      .get('http://localhost:4000/user/get', {
+      .get(`${process.env.REACT_APP_URL}/user/get`, {
         headers: { accessToken: localStorage.getItem('token') }
       })
       .then((res) => {

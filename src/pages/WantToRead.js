@@ -11,7 +11,7 @@ function WantToRead() {
 
   useEffect(async () => {
     await axios
-      .get('http://localhost:4000/user/see_want_to_read', {
+      .get(`${process.env.REACT_APP_URL}/user/see_want_to_read`, {
         headers: { accessToken: localStorage.getItem('token') }
       })
       .then((res) => {
@@ -28,7 +28,7 @@ function WantToRead() {
   const delGl = async (bid) => {
     await axios
       .post(
-        'http://localhost:4000/user/delete_from_gl',
+        `${process.env.REACT_APP_URL}/user/delete_from_gl`,
         { id: bid },
         {
           headers: { accessToken: localStorage.getItem('token') }

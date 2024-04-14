@@ -15,7 +15,7 @@ function Home() {
 
   useEffect(async () => {
     await axios
-      .get('http://localhost:4000/books/get', {
+      .get(`${process.env.REACT_APP_URL}/books/get`, {
         headers: { accessToken: localStorage.getItem('token') }
       })
       .then((res) => {
@@ -32,7 +32,7 @@ function Home() {
   const makeFav = async (bid) => {
     await axios
       .post(
-        'http://localhost:4000/user/add_to_favorites',
+        `${process.env.REACT_APP_URL}/user/add_to_favorites`,
         { id: bid },
         {
           headers: { accessToken: localStorage.getItem('token') }
@@ -52,7 +52,7 @@ function Home() {
   const delFav = async (bid) => {
     await axios
       .post(
-        'http://localhost:4000/user/delete_from_favorite',
+        `${process.env.REACT_APP_URL}/user/delete_from_favorite`,
         { id: bid },
         {
           headers: { accessToken: localStorage.getItem('token') }
@@ -71,7 +71,7 @@ function Home() {
   const makeGl = async (bid) => {
     await axios
       .post(
-        'http://localhost:4000/user/want_to_read',
+        `${process.env.REACT_APP_URL}/user/want_to_read`,
         { id: bid },
         {
           headers: { accessToken: localStorage.getItem('token') }
@@ -91,7 +91,7 @@ function Home() {
   const delGl = async (bid) => {
     await axios
       .post(
-        'http://localhost:4000/user/delete_from_gl',
+        `${process.env.REACT_APP_URL}/user/delete_from_gl`,
         { id: bid },
         {
           headers: { accessToken: localStorage.getItem('token') }
